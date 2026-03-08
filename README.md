@@ -2,6 +2,17 @@
 
 Proyecto estático en HTML/CSS/JS con páginas internas y navegación simple.
 
+## Accesos rápidos
+
+<p align="left">
+  <a href="https://statuesque-liger-3455ed.netlify.app/">
+    <img alt="Abrir web" src="https://img.shields.io/badge/Abrir%20web-Netlify-success?style=for-the-badge">
+  </a>
+  <a href="./">
+    <img alt="Repositorio" src="https://img.shields.io/badge/Ver%20repositorio-GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+  </a>
+</p>
+
 ## Demo local
 
 - Abrir el archivo [index.html](./index.html) en cualquier navegador moderno.
@@ -39,6 +50,17 @@ raquel-web/
 - Galería: cuadrícula de imágenes responsiva.
 - Mis intereses: accesos a Deportes, Estudios y Amigos.
 
+## Rutas y páginas
+
+| Sección  | Ruta                                      | Descripción                                   |
+|---------:|-------------------------------------------|-----------------------------------------------|
+| Inicio   | [./index.html](./index.html)              | Página principal con resumen de contenidos    |
+| Deportes | [./deportes/index.html](./deportes/index.html) | Índice de deportes y accesos internos     |
+| Ranking  | [./deportes/ranking/index.html](./deportes/ranking/index.html) | Tabla de competiciones           |
+| Top      | [./deportes/top/index.html](./deportes/top/index.html) | Deportes de raqueta destacados          |
+| Amigos   | [./amigos/index.html](./amigos/index.html) | Información sobre amistades                  |
+| Estudios | [./estudios/index.html](./estudios/index.html) | Información académica                      |
+
 ## Páginas internas
 
 - Deportes: índice con enlaces a Ranking y Top.
@@ -59,11 +81,11 @@ raquel-web/
 - Estilos globales: [styles.css](./styles.css).
 - Estilos de páginas internas: sus respectivos `styles.css` en cada carpeta.
 
-## Despliegue en GitHub Pages
+## Despliegue en Netlify
 
-- Rama: `main` con contenido en la raíz.
-- En el repositorio, activar GitHub Pages en Settings → Pages → Deploy from a branch → `main`/`root`.
-- La web queda disponible en la URL pública del repositorio.
+- URL de producción: https://statuesque-liger-3455ed.netlify.app/
+- Desplegado en Netlify a partir del contenido de este repositorio.
+- Cuando se actualiza `main`, Netlify puede publicar automáticamente la nueva versión (si está conectado).
 
 ## Licencia
 
