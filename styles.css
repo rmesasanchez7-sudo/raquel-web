@@ -1,0 +1,446 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: transparent;
+    color: #333;
+    padding-top: 60px; /* Reducido de 80px */
+    padding-bottom: 0;
+    min-height: 100dvh; /* Cambiado a dvh para dynamic viewport */
+    font-size: 14px; /* Reducido */
+    display: flex;
+    flex-direction: column;    box-sizing: border-box;}
+
+/* ================= MENÚ ================= */
+nav {
+    background: linear-gradient(90deg, #4fa3a5, #7bc6c8);
+    padding: 10px 0; /* Reducido */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px; /* Reducido */
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffe4ec;
+}
+
+/* ================= HEADER ================= */
+header {
+    text-align: center;
+    padding: 40px 15px; /* Reducido */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom-left-radius: 30px; /* Reducido */
+    border-bottom-right-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Aumentado */
+}
+
+header h1 {
+    font-size: 32px; /* Reducido */
+    color: #4fa3a5; /* Agregado color */
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px; /* Reducido */
+    max-width: 600px;
+    margin: auto;
+    color: #555;
+}
+
+/* ================= SECCIONES ================= */
+section {
+    width: 100%;
+    max-width: 800px; /* Limitado para no ser demasiado ancho */
+    margin: 20px auto; /* Reducido */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px; /* Reducido */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Aumentado */
+    padding: 20px; /* Reducido */
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    color: #4fa3a5; /* Agregado color */
+    text-align: center;
+    margin-bottom: 15px; /* Reducido */
+    font-size: 24px; /* Reducido */
+}
+
+#aficiones .aficiones-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+#aficiones .aficiones-text {
+    flex: 1;
+    text-align: left;
+}
+
+#aficiones .aficiones-text ol {
+    font-size: 18px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+#aficiones .aficiones-image {
+    flex: 0 0 260px;
+    margin-left: auto;
+}
+
+#aficiones .aficiones-image .img-hover {
+    width: 100%;
+    max-width: 260px;
+    margin: 0;
+}
+
+/* ================= IMAGEN HOVER ================= */
+.img-hover {
+    width: 200px; /* Reducido */
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.img-hover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= TABLA ================= */
+table {
+    width: 100%;
+    max-width: 600px; /* Limitado */
+    margin: 15px auto; /* Reducido */
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px; /* Reducido */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #4fa3a5; /* Agregado color */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ================= GALERÍA ================= */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-auto-rows: auto;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    border-radius: 12px;
+    transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria img:hover {
+    transform: scale(1.08);
+    filter: brightness(0.85);
+    box-shadow: 0 10px 25px rgba(79, 163, 165, 0.3);
+}
+
+/* ================= CARDS ================= */
+.cards {
+    display: flex;
+    gap: 15px; /* Reducido */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px; /* Reducido */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 200px; /* Reducido */
+    border-radius: 12px; /* Reducido */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Aumentado para efecto glass */
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    padding: 12px; /* Reducido */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 120px; /* Reducido */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card button {
+    margin: 12px; /* Reducido */
+    padding: 8px 16px; /* Reducido */
+    border: none;
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px; /* Reducido */
+    transition: box-shadow 0.3s ease;
+}
+
+.card button:hover {
+    background: #ffe4ec; /* Agregado color */
+    color: #333;
+}
+
+.card button:active {
+    box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #333;
+    text-align: center;
+    padding: 15px; /* Reducido */
+    margin-top: auto; /* Hace que el footer se pegue abajo */
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ================= BOTONES NEUMORPHISM ================= */
+.neumo-button {
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.neumo-button:hover {
+    background: #f0f0f0;
+}
+
+.neumo-button:active {
+    box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 30px 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 10px;
+    }
+
+    .cards {
+        gap: 10px;
+    }
+
+    .card {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .card img {
+        height: 100px;
+    }
+
+    .card button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    table {
+        max-width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .img-hover {
+        width: 150px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 20px 5px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+    .card button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .img-hover {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 11px;
+    }
+}

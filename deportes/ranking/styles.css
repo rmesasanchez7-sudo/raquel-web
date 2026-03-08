@@ -1,0 +1,261 @@
+/* ================= RANKING DE COMPETICIONES ================= */
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px; /* Reducido */
+    min-height: 100dvh; /* Cambiado a dvh */
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* ================= MENÚ ================= */
+nav {
+    background: linear-gradient(90deg, #4fa3a5, #7bc6c8);
+    padding: 10px 0; /* Reducido */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Reducido */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px; /* Reducido */
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffe4ec;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px; /* Reducido */
+    border-radius: 15px; /* Reducido */
+    max-width: 700px; /* Reducido */
+    margin: 20px auto; /* Agregado margen top y bottom */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Agregado para efecto glass */
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+}
+
+h1 { 
+    color: #4fa3a5; /* Agregado color */
+    text-align: center;
+    margin-bottom: 20px; /* Reducido */
+    font-size: 24px; /* Reducido */
+}
+
+p { 
+    font-size: 16px; /* Reducido */
+    line-height: 1.5;
+    margin: 12px 0; /* Reducido */
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+
+.ranking-table {
+    margin: 30px 0;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    padding: 15px; /* Reducido */
+    margin-bottom: 12px; /* Reducido */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-left: 5px solid #4fa3a5; /* Agregado color */
+    border-radius: 8px; /* Reducido */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Agregado para efecto glass */
+    transition: 0.3s;
+}
+
+.ranking-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.ranking-position {
+    font-size: 28px; /* Reducido */
+    font-weight: bold;
+    color: #4fa3a5; /* Agregado color */
+    min-width: 50px; /* Reducido */
+    text-align: center;
+}
+
+.ranking-info {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.ranking-info strong {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.ranking-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.ranking-info .year {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 3px 8px; /* Reducido */
+    border-radius: 12px; /* Reducido */
+    font-size: 12px; /* Reducido */
+    color: #4fa3a5; /* Agregado color */
+    font-weight: 600;
+}
+
+.ranking-medal {
+    font-size: 48px;
+}
+
+.boton-volver {
+    display: block;
+    width: 200px; /* Reducido */
+    margin: 25px auto 0; /* Reducido */
+    padding: 10px; /* Reducido */
+    text-align: center;
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: box-shadow 0.3s ease;
+}
+
+.boton-volver:hover {
+    background: #f0f0f0;
+}
+
+.boton-volver:active {
+    box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Hace que el footer se pegue abajo */
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 90%;
+        width: calc(100% - 20px);
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .ranking-item {
+        padding: 12px;
+    }
+
+    .ranking-position {
+        font-size: 24px;
+        min-width: 40px;
+    }
+
+    .ranking-medal {
+        font-size: 40px;
+    }
+
+    .boton-volver {
+        width: 180px;
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        max-width: 95%;
+        width: calc(100% - 10px);
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .ranking-item {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ranking-position {
+        font-size: 20px;
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+
+    .ranking-info {
+        margin-left: 0;
+    }
+
+    .ranking-medal {
+        font-size: 32px;
+        margin-top: 5px;
+    }
+
+    .boton-volver {
+        width: 160px;
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
